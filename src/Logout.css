@@ -1,0 +1,58 @@
+/* Logout Button Styles */
+.logout-button {
+    background: linear-gradient(135deg, #ff4757, #ff6b81);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 8px rgba(255, 71, 87, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Hover Effect */
+  .logout-button:hover {
+    background: linear-gradient(135deg, #ff6b81, #ff4757);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(255, 71, 87, 0.3);
+  }
+  
+  /* Click (Active) Effect */
+  .logout-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 3px 6px rgba(255, 71, 87, 0.2);
+  }
+  
+  /* Glow Effect */
+  .logout-button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 71, 87, 0.3) 10%, transparent 50%);
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  
+  .logout-button:hover::before {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 480px) {
+    .logout-button {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+    }
+  }
+  

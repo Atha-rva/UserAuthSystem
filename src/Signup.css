@@ -1,0 +1,136 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Container */
+.signup-container,
+.reset-container {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Title */
+.auth-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #fff;
+    text-align: center;
+}
+
+/* Card with Glassmorphism Effect */
+.signup-card,
+.reset-card {
+    background: rgba(255, 255, 255, 0.2);
+    background-filter: blur(15px);
+    border-radius: 15px;
+    padding: 2.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.signup-card:hover,
+.reset-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Title */
+.signup-title,
+.reset-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+/* Form */
+.signup-form,
+.reset-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    position: relative;
+}
+
+/* Input Fields */
+.signup-input,
+.reset-input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.signup-input::placeholder,
+.reset-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.signup-input:focus,
+.reset-input:focus {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Submit Button */
+.signup-button,
+.reset-button {
+    background: linear-gradient(90deg, #ff8a00, #e52e71);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+.signup-button:hover,
+.reset-button:hover {
+    background: linear-gradient(90deg, #e52e71, #ff8a00);
+    transform: scale(1.05);
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    .signup-card,
+    .reset-card {
+        padding: 1.5rem;
+    }
+
+    .signup-title,
+    .reset-title {
+        font-size: 1.7rem;
+    }
+
+    .auth-title {
+        font-size: 2rem;
+    }
+}
